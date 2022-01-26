@@ -1,4 +1,4 @@
-{% set version = '1.4.1' %}
+{% set version = "1.4.2" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,10 +10,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/kvh_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/kvh/kvh_{{ version }}.tar.gz
-  sha256: e0612618efb66e8a05986ad6f5d3cd97684ffeedd35b8f52b718757897a7d842
+  sha256: 28b2eed7dfbccddbc30bab6dac8d10dd299816065631c8527a4fb2fdb2b8a753
 
 build:
-  merge_build_host: True  # [win]
+  merge_build_host: true  # [win]
   number: 0
   rpaths:
     - lib/R/lib/
@@ -47,13 +47,10 @@ test:
 about:
   home: http://serguei.sokol.free.fr/kvh-format/
   license: GPL-2.0-or-later
-  summary: The format KVH is a lightweight format that can be read/written both by humans and
-    machines. It can be useful in situations where XML or alike formats seem to be an
-    overkill. We provide an ability to parse KVH files in R pretty fast due to 'Rcpp'
-    use.
+  summary: The format KVH is a lightweight format that can be read/written both by humans and machines. It can be useful in situations where XML or alike formats seem to be an overkill. We provide an ability to parse KVH files in R pretty fast due to 'Rcpp' use.
   license_family: GPL2
   license_file:
-    - '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2'
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2
 extra:
   recipe-maintainers:
     - conda-forge/r
