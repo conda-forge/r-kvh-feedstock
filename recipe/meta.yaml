@@ -1,4 +1,4 @@
-{% set version = "1.4.2" %}
+{% set version = "1.5.0" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/kvh_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/kvh/kvh_{{ version }}.tar.gz
-  sha256: 28b2eed7dfbccddbc30bab6dac8d10dd299816065631c8527a4fb2fdb2b8a753
+  sha256: 310235c92d0d585eb0d3f089f68bd5780caabbc256b9665a4cda1460af893552
 
 build:
-  number: 4
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
